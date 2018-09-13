@@ -140,7 +140,7 @@ public class FrontArchiveController extends BaseController {
         }
         //获取文章的标签用作keywords
         List<Tag> tags = post.getTags();
-        List<String> tagWords = new ArrayList<>();
+        List<String> tagWords = new ArrayList<String>();
         if (tags != null) {
             for (Tag tag : tags) {
                 tagWords.add(tag.getTagName());

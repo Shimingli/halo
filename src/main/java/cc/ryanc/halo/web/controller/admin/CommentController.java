@@ -221,7 +221,7 @@ public class CommentController extends BaseController {
         public void run() {
             if (StringUtils.equals(HaloConst.OPTIONS.get(BlogPropertiesEnum.SMTP_EMAIL_ENABLE.getProp()), TrueFalseEnum.TRUE.getDesc()) && StringUtils.equals(HaloConst.OPTIONS.get(BlogPropertiesEnum.COMMENT_REPLY_NOTICE.getProp()), TrueFalseEnum.TRUE.getDesc())) {
                 if (Validator.isEmail(lastComment.getCommentAuthorEmail())) {
-                    Map<String, Object> map = new HashMap<>(8);
+                    Map<String, Object> map = new HashMap<String, Object>(8);
                     map.put("blogTitle", HaloConst.OPTIONS.get(BlogPropertiesEnum.BLOG_TITLE.getProp()));
                     map.put("commentAuthor", lastComment.getCommentAuthor());
                     map.put("pageName", lastComment.getPost().getPostTitle());

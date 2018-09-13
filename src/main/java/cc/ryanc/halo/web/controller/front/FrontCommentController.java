@@ -169,7 +169,7 @@ public class FrontCommentController {
             if (StringUtils.equals(HaloConst.OPTIONS.get(BlogPropertiesEnum.SMTP_EMAIL_ENABLE.getProp()), TrueFalseEnum.TRUE.getDesc()) && StringUtils.equals(HaloConst.OPTIONS.get(BlogPropertiesEnum.NEW_COMMENT_NOTICE.getProp()), TrueFalseEnum.TRUE.getDesc())) {
                 try {
                     //发送邮件到博主
-                    Map<String, Object> map = new HashMap<>(5);
+                    Map<String, Object> map = new HashMap<String, Object>(5);
                     map.put("author", userService.findUser().getUserDisplayName());
                     map.put("pageName", post.getPostTitle());
                     if (StringUtils.equals(post.getPostType(), PostTypeEnum.POST_TYPE_POST.getDesc())) {

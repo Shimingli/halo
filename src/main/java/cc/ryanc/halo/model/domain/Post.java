@@ -81,7 +81,7 @@ public class Post implements Serializable {
     @JoinTable(name = "halo_posts_categories",
             joinColumns = {@JoinColumn(name = "post_id", nullable = false)},
             inverseJoinColumns = {@JoinColumn(name = "cate_id", nullable = false)})
-    private List<Category> categories = new ArrayList<>();
+    private List<Category> categories = new ArrayList<Category>();
 
     /**
      * 文章所属标签

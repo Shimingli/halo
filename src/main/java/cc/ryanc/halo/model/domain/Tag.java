@@ -42,5 +42,5 @@ public class Tag implements Serializable {
 
     @ManyToMany(mappedBy = "tags")
     @JsonIgnore
-    private List<Post> posts = new ArrayList<>();
+    private List<Post> posts = new ArrayList<Post>();
 }

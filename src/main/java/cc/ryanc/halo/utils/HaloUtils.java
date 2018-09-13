@@ -56,7 +56,7 @@ public class HaloUtils {
         String srcPathStr = System.getProperties().getProperty("user.home") + "/halo/backup/" + dir;
         File srcPath = new File(srcPathStr);
         File[] files = srcPath.listFiles();
-        List<BackupDto> backupDtos = new ArrayList<>();
+        List<BackupDto> backupDtos = new ArrayList<BackupDto>();
         BackupDto backupDto = null;
         //遍历文件
         if (null != files) {

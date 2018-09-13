@@ -21,6 +21,7 @@ public class Application {
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(Application.class, args);
         String serverPort = context.getEnvironment().getProperty("server.port");
-        log.info("Halo started at http://localhost:" + serverPort);
+        //Log4j找不到log  https://www.jianshu.com/p/d456b420d7d7 在项目中使用Lombok可以减少很多重复代码的书写
+        log.info("Shiming Demo  Halo started at http://localhost:" + serverPort);
     }
 }

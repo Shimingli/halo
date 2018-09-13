@@ -100,7 +100,7 @@ public class TagServiceImpl implements TagService {
     @Override
     public List<Tag> strListToTagList(String tagList) {
         String[] tags = tagList.split(",");
-        List<Tag> tagsList = new ArrayList<>();
+        List<Tag> tagsList = new ArrayList<Tag>();
         for (String tag : tags) {
             Tag t = findTagByTagName(tag);
             Tag nt = null;

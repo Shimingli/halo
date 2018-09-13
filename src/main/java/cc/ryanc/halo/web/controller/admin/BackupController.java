@@ -66,7 +66,7 @@ public class BackupController {
         } else if (StringUtils.equals(type, BackupTypeEnum.POSTS.getDesc())) {
             backups = HaloUtils.getBackUps(BackupTypeEnum.POSTS.getDesc());
         } else {
-            backups = new ArrayList<>();
+            backups = new ArrayList<BackupDto>();
         }
         model.addAttribute("backups", backups);
         model.addAttribute("type", type);
